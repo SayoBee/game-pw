@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Predict And Win</h3>
+    <p style="color: red;"><b>Instruction:</b>In order to win this game predict a number between 1 - 30 and send it if the number you enter is correct you will stand a chance to wil #3k</p>
+    <br>
+    <input id="cut" placeholder="Predict Now"><br><br>
+    <button onclick="setup()"><b> Play</b></button>
+    <p id="set"></p>
+    <p id="first"></p>
+    <p id="abo"></p>
+    <script>
+        function setup(){
+        let g =(Math.floor(Math.random() * 31))
+        document.getElementById('set').innerHTML=g;
+        let predict = document.getElementById('cut').value;
+        if (g == predict){
+            document.getElementById('first').innerHTML= "YOU WOIN!!!😀😛😊";
+        }
+        else { 
+            document.getElementById('first').innerHTML="Sorry Try Again Next Time 🤦😢🤦‍♂️";
+        }if (predict<=0 || predict >=31){
+            document.getElementById('first').innerHTML="Not Acceptable ❌❌❌❗❗❗";
+        }
+    }
+    </script>
+</body>
+</html>
